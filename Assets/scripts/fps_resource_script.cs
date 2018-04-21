@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class fps_resource_script : MonoBehaviour {
 
+	public AudioSource mainButtonAudio;
 	public Button fpsIncreaseButton;
 	public Text fpsDisplayText;
 
@@ -39,6 +40,7 @@ public class fps_resource_script : MonoBehaviour {
 
 	void onClickFPSIncreaseButton()
 	{
+		this.mainButtonAudio.Play();
 		this.currentFPS += this.fpsIncreaseStep;
 		this.updateFPSText();
 	}
