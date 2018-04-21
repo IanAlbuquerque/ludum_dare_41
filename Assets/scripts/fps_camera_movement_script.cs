@@ -18,8 +18,8 @@ public class fps_camera_movement_script : MonoBehaviour {
 	}
 	
 	void LateUpdate () {
-		this.fpsCamera.transform.eulerAngles = new Vector3(yCameraVariationAmplitude * Mathf.Sin(yCameraVariationDilatation * Time.time + yCameraVariationOffset),
-																											 xCameraVariationAmplitude * Mathf.Sin(xCameraVariationDilatation * Time.time + xCameraVariationOffset),
-																											 0.0f);
+		this.fpsCamera.transform.localEulerAngles = new Vector3(yCameraVariationAmplitude * Mathf.Sin(yCameraVariationDilatation * Time.time + yCameraVariationOffset),
+																														xCameraVariationAmplitude * Mathf.Sin(xCameraVariationDilatation * Time.time + xCameraVariationOffset),
+																														0.0f);
 	}
 }
