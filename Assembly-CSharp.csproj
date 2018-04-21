@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\fps_camera_movement_script.cs" />
+     <Compile Include="Assets\scripts\fps_frame_rate_control.cs" />
      <Compile Include="Assets\scripts\fps_gun_shot_script.cs" />
+     <Compile Include="Assets\scripts\fps_hits_control.cs" />
      <Compile Include="Assets\scripts\fps_resource_script.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

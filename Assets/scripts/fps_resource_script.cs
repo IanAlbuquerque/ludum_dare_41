@@ -16,13 +16,21 @@ public class fps_resource_script : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.fpsIncreaseButton.onClick.AddListener(onClickFPSIncreaseButton);
-		this.currentFPS = startingFPS;
+		this.setCurrentFPS(this.startingFPS);
 		this.updateFPSText();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void setCurrentFPS(float fpsRate) {
+		this.currentFPS = fpsRate;
+	}
+
+	public float getCurrentFPS() {
+		return this.currentFPS;
 	}
 
 	void updateFPSText() {

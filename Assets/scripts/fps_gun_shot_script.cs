@@ -9,6 +9,8 @@ public class fps_gun_shot_script : MonoBehaviour {
 
 	private int raycastTargetLayer;
 
+	public fps_hits_control fpsHitsControlScript;
+
 	// Use this for initialization
 	void Start () {
 		this.raycastTargetLayer = 1 << 8;
@@ -31,12 +33,10 @@ public class fps_gun_shot_script : MonoBehaviour {
 	}
 
 	void onTargetHit(RaycastHit hit) {
-    Debug.DrawRay(this.fpsCamera.transform.position, this.fpsCamera.transform.forward * hit.distance, Color.yellow);
-		Debug.Log("Did Hit");
+    this.fpsHitsControlScript.registerHit();
 	}
 
 	void onTargetMiss() {
-    Debug.DrawRay(this.fpsCamera.transform.position, this.fpsCamera.transform.forward * 1000, Color.white);
-		Debug.Log("Did NOT Hit");
+    this.fpsHitsControlScript.registerMiss();
 	}
 }
