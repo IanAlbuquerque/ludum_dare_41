@@ -33,3 +33,7 @@ sysinfo.txt
 # Builds
 .apk
 .unitypackage
+Assets/models/Terrain/Materials/No Name.mat.meta
+Assets/models/Terrain/Materials/No Name.mat
+Assets/models/Rocks/Materials/No Name.mat.meta
+Assets/models/Rocks/Materials/No Name.mat
