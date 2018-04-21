@@ -12112,8 +12112,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 684314487}
-  - component: {fileID: 684314488}
   - component: {fileID: 684314489}
+  - component: {fileID: 684314488}
   - component: {fileID: 684314490}
   - component: {fileID: 684314491}
   - component: {fileID: 684314492}
@@ -12172,10 +12172,8 @@ MonoBehaviour:
   fpsCameraKnockbackFrame: {fileID: 784298979}
   fpsCamera: {fileID: 2136027177}
   fpsHitsControlScript: {fileID: 684314490}
-  knockbackAnimationAmplitude: 15
-  knockbackAnimationDilatation: 3.14
-  knockbackAnimationOffset: 0
-  knockbackAnimationDuration: 1
+  knockbackAngle: 5
+  knockbackAnimationDuration: 0.5
 --- !u!114 &684314490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24612,7 +24610,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1420490596}
-  m_LocalRotation: {x: 0.12542789, y: 0.16291896, z: 0.020885464, w: -0.9784115}
+  m_LocalRotation: {x: 0.12542789, y: 0.16291896, z: 0.020885466, w: -0.9784115}
   m_LocalPosition: {x: 8.571655, y: -17.163645, z: -30.631233}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
