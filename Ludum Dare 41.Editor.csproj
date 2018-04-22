@@ -267,12 +267,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Ludum Dare 41.Plugins.csproj">
+      <Project>{6D0B1B9D-1E24-E9E5-31F3-D60825F2F30F}</Project>
+      <Name>Ludum Dare 41.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="Ludum Dare 41.csproj">
       <Project>{DB959528-644C-15BF-A460-CC9023EFBD39}</Project>
       <Name>Ludum Dare 41</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_MK\MKToonFree\Editor\MKToonFreeEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
@@ -354,6 +359,29 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Common\MKToonDef.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Common\MKToonInc.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Common\MKToonLight.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Common\MKToonV.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Forward\MKToonForward.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Forward\MKToonForwardAddSetup.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Forward\MKToonForwardBaseSetup.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Forward\MKToonForwardIO.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlyBase.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlyIO.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlySetup.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCaster.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCasterIO.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCasterSetup.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Surface\MKToonSurface.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\Inc\Surface\MKToonSurfaceIO.cginc" />
+    <None Include="Assets\_MK\MKToonFree\Shader\MKToonFree.shader" />
+    <None Include="Assets\_MK\MKToonFree\Shader\MKToonFreeMobile.shader" />
+    <None Include="Assets\_MK\MKToonFree\Shader\MKToonFreeOutlineOnly.shader" />
     <None Include="Assets\fonts\badaboom_bb\font info.txt" />
     <None Include="Assets\fonts\komika\Komika.txt" />
     <None Include="Assets\fonts\komika\readme.txt" />
