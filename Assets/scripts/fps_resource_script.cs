@@ -9,6 +9,8 @@ public class fps_resource_script : MonoBehaviour {
 	public Button fIncreaseButton;
 	public Text fDisplayText;
 	public Text fpsDisplayText;
+	public Text shopfDisplayText;
+	public Text shopfpsDisplayText;
 
 	public float startingFroots;
 
@@ -38,7 +40,10 @@ public class fps_resource_script : MonoBehaviour {
 		this.samplingPassedTime += Time.deltaTime;
 		if (this.samplingPassedTime > this.fpsSamplingInterval) {
 			this.samplingPassedTime = 0;
-			this.estimatedFPS = (this.currentF - this.lastF) / this.fpsSamplingInterval;
+			float newEstimatedFPS = (this.currentF - this.lastF) / this.fpsSamplingInterval;
+			if (newEstimatedFPS >= 0) {
+				this.estimatedFPS = newEstimatedFPS;
+			}
 			this.updateFPSText();
 			this.lastF = this.currentF;
 		}
@@ -63,11 +68,13 @@ public class fps_resource_script : MonoBehaviour {
 	}
 
 	void updateFText() {
-		this.fDisplayText.text = this.currentF.ToString() + " FROOTS";
+		this.fDisplayText.text = Mathf.Floor(this.currentF).ToString() + " FROOTS";
+		this.shopfDisplayText.text = Mathf.Floor(this.currentF).ToString() + " FROOTS";
 	}
 
 	void updateFPSText() {
-		this.fpsDisplayText.text = this.estimatedFPS.ToString() + " FPS";
+		this.fpsDisplayText.text = Mathf.Floor(this.estimatedFPS).ToString() + " FPS";
+		this.shopfpsDisplayText.text = Mathf.Floor(this.estimatedFPS).ToString() + " FPS";
 	}
 
 	void onClickMainButton()

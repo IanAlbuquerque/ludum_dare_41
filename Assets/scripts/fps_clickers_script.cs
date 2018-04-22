@@ -19,22 +19,39 @@ public class fps_clickers_script : MonoBehaviour {
 
 	private float timeElapsed;
 
+	private Image[] buttonImages;
+
 	public float increaseInterval;
+
+	public float costMultiplier;
+
+	public AudioSource adoptAudioSource;
 	
 	public fps_resource_script fpsResourceScript;
 
 	// Use this for initialization
 	void Start () {
 		this.timeElapsed = 0.0f;
+		this.buttonImages = new Image[this.numClickers];
 		for(int i=0; i<this.numClickers; i++) {
-			this.costTexts[i].text = "Costs " + this.clickersCost[i] + " Froots";
-			this.fpsTexts[i].text = "+" + this.clickersFPS[i] + " FPS";
-			this.amountTexts[i].text = "x" + this.clickerCount[i] + " Adopted";
+			this.updateTexts(i);
+			int clickerIndex = i; // important to instantiate another variable
+			this.buyButton[i].onClick.AddListener(() => {this.onClickBuyClicker(clickerIndex);});
+			this.buttonImages[i] = this.buyButton[i].GetComponent<Image>();
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		for(int i=0; i<this.numClickers; i++) {
+			if (this.fpsResourceScript.getCurrentF() >= this.clickersCost[i]) {
+				this.buyButton[i].interactable = true;
+				this.buttonImages[i].color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+			} else {
+				this.buyButton[i].interactable = false;
+				this.buttonImages[i].color = new Vector4(0.7f, 0.7f, 0.7f, 0.2f);
+			}
+		}
 		this.timeElapsed += Time.deltaTime;
 		if (this.timeElapsed > this.increaseInterval) {
 			for(int i=0; i<this.numClickers; i++) {
@@ -43,5 +60,21 @@ public class fps_clickers_script : MonoBehaviour {
 			this.timeElapsed = 0.0f;
 		}
 
+	}
+
+	void updateTexts(int clickerIndex) {
+		this.costTexts[clickerIndex].text = "Costs " + this.clickersCost[clickerIndex] + " Froots";
+		this.fpsTexts[clickerIndex].text = "+" + this.clickersFPS[clickerIndex] + " FPS";
+		this.amountTexts[clickerIndex].text = "x" + this.clickerCount[clickerIndex] + " Adopted";
+	}
+
+	void onClickBuyClicker(int clickerIndex) {
+		if (this.fpsResourceScript.getCurrentF() >= this.clickersCost[clickerIndex]) {
+			this.adoptAudioSource.Play();
+			this.fpsResourceScript.addToCurrentF(-this.clickersCost[clickerIndex]);
+			this.clickerCount[clickerIndex] += 1;
+			this.clickersCost[clickerIndex] = Mathf.Floor(this.costMultiplier * this.clickersCost[clickerIndex]);
+			this.updateTexts(clickerIndex);
+		}
 	}
 }
