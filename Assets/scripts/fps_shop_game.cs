@@ -13,7 +13,7 @@ public class fps_shop_game : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		// this.gameCanvas.enabled = true;
+		this.gameCanvas.enabled = true;
 		this.shopCanvas.enabled = false;
 	}
 	
@@ -25,13 +25,13 @@ public class fps_shop_game : MonoBehaviour {
 
 	void onClickGotoShop()
 	{
-		// this.gameCanvas.enabled = false;
+		this.gameCanvas.enabled = false;
 		this.shopCanvas.enabled = true;
 	}
 
 	void onClickGotoGame()
 	{
-		// this.gameCanvas.enabled = true;
+		this.gameCanvas.enabled = true;
 		this.shopCanvas.enabled = false;
 	}
 }
