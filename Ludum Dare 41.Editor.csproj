@@ -354,6 +354,10 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+    <None Include="Assets\fonts\badaboom_bb\font info.txt" />
+    <None Include="Assets\fonts\komika\Komika.txt" />
+    <None Include="Assets\fonts\komika\readme.txt" />
+    <None Include="Assets\fonts\poprumcute\仕様説明.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
