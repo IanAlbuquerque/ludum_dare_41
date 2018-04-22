@@ -111,6 +111,7 @@
      <Compile Include="Assets\scripts\fps_hits_control.cs" />
      <Compile Include="Assets\scripts\fps_resource_script.cs" />
      <Compile Include="Assets\scripts\fps_shop_game.cs" />
+     <Compile Include="Assets\scripts\kill_if_outofbounds.cs" />
      <Compile Include="Assets\scripts\visible_if_button_pressed.cs" />
      <Compile Include="Assets\scripts\visible_if_clicker_cycle.cs" />
      <Compile Include="Assets\scripts\visible_if_key_pressed.cs" />

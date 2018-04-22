@@ -28,6 +28,13 @@ public class fps_resource_script : MonoBehaviour {
 
 	private float estimatedFPS;
 
+	public GameObject frootSpawner;
+	public GameObject redFroot;
+	public GameObject greenFroot;
+	public GameObject yellowFroot;
+	public GameObject purpleFroot;
+	public GameObject orangeFroot;
+
 	// Use this for initialization
 	void Start () {
 		this.fIncreaseButton.onClick.AddListener(onClickMainButton);
@@ -94,8 +101,25 @@ public class fps_resource_script : MonoBehaviour {
 	{
 		this.mainButtonAudio.pitch = Random.Range (0.9f,1.3f);
 		this.mainButtonAudio.Play();
-		this.currentF += 1;
+		this.addToCurrentF(1.0f);
 		this.updateFText();
+		GameObject froot;
+		int r = Mathf.FloorToInt(Random.value * 5.0f);
+		if(r==0)
+			froot = Object.Instantiate(this.redFroot);
+		else if(r==1)
+			froot = Object.Instantiate(this.greenFroot);
+		else if(r==2)
+			froot = Object.Instantiate(this.yellowFroot);
+		else if(r==3)
+			froot = Object.Instantiate(this.purpleFroot);
+		else
+			froot = Object.Instantiate(this.orangeFroot);
+		Vector3 randomness = Random.onUnitSphere * 5.0f;
+		randomness.y = Mathf.Abs(randomness.y);
+		froot.transform.position = this.frootSpawner.transform.position + randomness;
+		froot.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f) * 0.1226408f;
+		froot.AddComponent<kill_if_outofbounds>();
 	}
 
 }
