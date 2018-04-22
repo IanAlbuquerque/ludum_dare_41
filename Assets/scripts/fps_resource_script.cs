@@ -79,6 +79,7 @@ public class fps_resource_script : MonoBehaviour {
 
 	void onClickMainButton()
 	{
+		this.mainButtonAudio.pitch = Random.Range (0.9f,1.3f);
 		this.mainButtonAudio.Play();
 		this.currentF += 1;
 		this.updateFText();

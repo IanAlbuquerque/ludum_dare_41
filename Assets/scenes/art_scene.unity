@@ -1251,9 +1251,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 29076c5fa1c69e4488fd3ae3e0523147, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 78d641ccc1368e94b8089e5274ce5e07, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9769,9 +9769,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: 
 --- !u!222 &500725811
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11064,6 +11062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 556865735}
   - component: {fileID: 556865736}
+  - component: {fileID: 556865737}
   m_Layer: 0
   m_Name: gun_shot
   m_TagString: Untagged
@@ -11095,7 +11094,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 38a49a3abf15b1840816861d47f12ab3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.275
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11164,6 +11163,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!167 &556865737
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 556865734}
+  m_Enabled: 1
+  m_MinDistance: 10
+  m_MaxDistance: 15
+  m_ReverbPreset: 16
+  m_Room: -1000
+  m_RoomHF: -3300
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.54
+  m_Reflections: -2560
+  m_ReflectionsDelay: 0.162
+  m_Reverb: -229
+  m_ReverbDelay: 0.088
+  m_HFReference: 5000
+  m_Diffusion: 79
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!1 &562687053
 GameObject:
   m_ObjectHideFlags: 0
@@ -29787,10 +29809,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2ea5b6bf45f9dd94facf46455f1cf74d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 727cd76ae578fd44280a74c1190088ed, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.071
-  m_Pitch: 3
+  m_Volume: 0.391
+  m_Pitch: 1.28
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -35561,6 +35583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1807471527}
   - component: {fileID: 1807471528}
+  - component: {fileID: 1807471529}
   m_Layer: 0
   m_Name: gun_hit
   m_TagString: Untagged
@@ -35598,7 +35621,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 144
+  Priority: 19
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -35661,6 +35684,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!167 &1807471529
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807471526}
+  m_Enabled: 1
+  m_MinDistance: 10
+  m_MaxDistance: 15
+  m_ReverbPreset: 13
+  m_Room: -1000
+  m_RoomHF: -300
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.59
+  m_Reflections: -1219
+  m_ReflectionsDelay: 0.007
+  m_Reverb: 441
+  m_ReverbDelay: 0.011
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!1 &1812718329
 GameObject:
   m_ObjectHideFlags: 0
