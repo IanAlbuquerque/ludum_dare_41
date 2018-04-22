@@ -13,6 +13,7 @@ public class fps_gun_shot_script : MonoBehaviour {
 
 	public AudioSource gunShotAudioSource;
 	public AudioSource gunHitAudioSource;
+	public AudioSource gunFailAudioSource;
 	public KeyCode shotKeycode;
 
 	public GameObject fpsCameraKnockbackFrame;
@@ -39,8 +40,12 @@ public class fps_gun_shot_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(this.shotKeycode) && this.canShoot && this.fpsResourceScript.getEstimatedFPS() > 0.0f) {
-			this.onShotTrigger();
+		if (Input.GetKeyDown(this.shotKeycode)) {
+			if(this.canShoot && this.fpsResourceScript.getEstimatedFPS() > 0.0f) {
+				this.onShotTrigger();
+			} else if(this.canShoot) {
+				this.gunFailAudioSource.Play();
+			}
 		}
 		if (this.isKnockbackAnimationActive) {
 			float t = (Time.time - this.knockbackAnimationStartTimestamp) / this.knockbackAnimationDuration;

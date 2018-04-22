@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class fps_resource_script : MonoBehaviour {
 
+	public MeshRenderer fpsShooterScreen;
+	public MeshRenderer failedScreen;
+
 	public AudioSource mainButtonAudio;
 	public Button fIncreaseButton;
 	public Text fDisplayText;
 	public Text fpsDisplayText;
 	public Text shopfDisplayText;
 	public Text shopfpsDisplayText;
+	public TextMesh inGameFPSText;
 
 	public float startingFroots;
 
@@ -47,6 +51,14 @@ public class fps_resource_script : MonoBehaviour {
 			this.updateFPSText();
 			this.lastF = this.currentF;
 		}
+
+		if (this.estimatedFPS > 0.0f) {
+			this.failedScreen.enabled = false;
+			this.fpsShooterScreen.enabled = true;
+		} else {
+			this.failedScreen.enabled = true;
+			this.fpsShooterScreen.enabled = false;
+		}
 	}
 
 	public void addToCurrentF(float value) {
@@ -73,8 +85,9 @@ public class fps_resource_script : MonoBehaviour {
 	}
 
 	void updateFPSText() {
-		this.fpsDisplayText.text = Mathf.Floor(this.estimatedFPS).ToString() + " FPS";
-		this.shopfpsDisplayText.text = Mathf.Floor(this.estimatedFPS).ToString() + " FPS";
+		this.fpsDisplayText.text = (Mathf.Ceil(this.estimatedFPS)).ToString() + " FPS";
+		this.shopfpsDisplayText.text = (Mathf.Ceil(this.estimatedFPS)).ToString() + " FPS";
+		this.inGameFPSText.text = (Mathf.Ceil(this.estimatedFPS)).ToString() + " FPS";
 	}
 
 	void onClickMainButton()
