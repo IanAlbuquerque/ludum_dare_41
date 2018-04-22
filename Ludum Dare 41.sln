@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludum Dare 41", "Ludum Dare 41.csproj", "{DB959528-644C-15BF-A460-CC9023EFBD39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludum Dare 41.Plugins", "Ludum Dare 41.Plugins.csproj", "{6D0B1B9D-1E24-E9E5-31F3-D60825F2F30F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludum Dare 41.Editor", "Ludum Dare 41.Editor.csproj", "{A89104BB-5EF7-5119-AD97-5AD386AC5FF2}"
 EndProject
 Global
@@ -17,10 +15,6 @@ Global
 		{DB959528-644C-15BF-A460-CC9023EFBD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB959528-644C-15BF-A460-CC9023EFBD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB959528-644C-15BF-A460-CC9023EFBD39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D0B1B9D-1E24-E9E5-31F3-D60825F2F30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D0B1B9D-1E24-E9E5-31F3-D60825F2F30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D0B1B9D-1E24-E9E5-31F3-D60825F2F30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D0B1B9D-1E24-E9E5-31F3-D60825F2F30F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A89104BB-5EF7-5119-AD97-5AD386AC5FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A89104BB-5EF7-5119-AD97-5AD386AC5FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A89104BB-5EF7-5119-AD97-5AD386AC5FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
