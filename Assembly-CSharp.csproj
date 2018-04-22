@@ -103,6 +103,7 @@
      <Compile Include="Assets\scripts\fps_hits_control.cs" />
      <Compile Include="Assets\scripts\fps_resource_script.cs" />
      <Compile Include="Assets\scripts\fps_shop_game.cs" />
+     <Compile Include="Assets\scripts\visible_if_key_pressed.cs" />
      <Compile Include="Assets\scripts\wiggle_script.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\fonts\komika\readme.txt" />
