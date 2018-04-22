@@ -126,7 +126,7 @@ Material:
     - _AnimationDirection: {r: 2, g: 4, b: 2, a: -1}
     - _AnimationTiling: {r: 0.04582553, g: 0.0182, b: 0.045714468, a: 0.027129691}
     - _BaseColor: {r: 0.10899653, g: 0.34284687, b: 0.35294116, a: 0.82}
-    - _BumpDirection: {r: 40, g: 40, b: 40, a: -40}
+    - _BumpDirection: {r: 2, g: 30, b: 2, a: 40}
     - _BumpMap_ST: {r: 1, g: 1, b: 0, a: 0}
     - _BumpTiling: {r: 0.12, g: 0.07, b: 0.08, a: 0.06}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -146,7 +146,7 @@ Material:
     - _GSpeed: {r: -0.13, g: 2, b: 0.15, a: 0.8}
     - _GSteepness: {r: 7, g: 2, b: 6, a: 2}
     - _HorizonColor: {r: 0.052907113, g: 0.24486735, b: 0.2835821, a: 1}
-    - _InvFadeParemeter: {r: 0.21896552, g: 0.15944828, b: 0.04310345, a: 0}
+    - _InvFadeParemeter: {r: 0.61, g: 0.15944828, b: 0.04310345, a: 0}
     - _MainTex_ST: {r: 1, g: 1, b: 0, a: 0}
     - _ReflectionColor: {r: 0.5794164, g: 0.6934976, b: 0.76119405, a: 0.43137255}
     - _ReflectionTex_ST: {r: 1, g: 1, b: 0, a: 0}
