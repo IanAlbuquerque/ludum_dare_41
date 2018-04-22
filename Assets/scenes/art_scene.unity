@@ -14162,8 +14162,10 @@ MonoBehaviour:
   fpsCameraKnockbackFrame: {fileID: 784298979}
   fpsCamera: {fileID: 2136027177}
   fpsHitsControlScript: {fileID: 684314490}
+  fpsResourceScript: {fileID: 684314491}
   knockbackAngle: 5
   knockbackAnimationDuration: 0.5
+  canShoot: 1
 --- !u!114 &684314490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14269,6 +14271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fde5d953dae6d64694c1670a73033cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fpsGunShotScript: {fileID: 684314489}
   buttonGotoShop: {fileID: 146277482}
   buttonGotoGame: {fileID: 1038639113}
   gameCanvas: {fileID: 1892177458}
