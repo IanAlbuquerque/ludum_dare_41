@@ -29,6 +29,14 @@ public class fps_clickers_script : MonoBehaviour {
 	
 	public fps_resource_script fpsResourceScript;
 
+	public float getCount(int clickerIndex) {
+		return this.clickerCount[clickerIndex];
+	}
+
+	public float getFPS(int clickerIndex) {
+		return this.clickersFPS[clickerIndex];
+	}
+
 	// Use this for initialization
 	void Start () {
 		this.timeElapsed = 0.0f;

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class fps_shop_game : MonoBehaviour {
 
+	public fps_gun_shot_script fpsGunShotScript;
+
 	public Button buttonGotoShop;
 	public Button buttonGotoGame;
 
@@ -13,8 +15,7 @@ public class fps_shop_game : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.gameCanvas.enabled = true;
-		this.shopCanvas.enabled = false;
+		this.onClickGotoGame();
 	}
 	
 	// Update is called once per frame
@@ -27,11 +28,13 @@ public class fps_shop_game : MonoBehaviour {
 	{
 		this.gameCanvas.enabled = false;
 		this.shopCanvas.enabled = true;
+		this.fpsGunShotScript.canShoot = false;
 	}
 
 	void onClickGotoGame()
 	{
 		this.gameCanvas.enabled = true;
 		this.shopCanvas.enabled = false;
+		this.fpsGunShotScript.canShoot = true;
 	}
 }

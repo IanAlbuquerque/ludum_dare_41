@@ -21,12 +21,15 @@ public class fps_gun_shot_script : MonoBehaviour {
 	private int raycastTargetLayer;
 
 	public fps_hits_control fpsHitsControlScript;
+	public fps_resource_script fpsResourceScript;
 
 	private bool isKnockbackAnimationActive;
 	private float knockbackAnimationStartTimestamp;
 
 	public float knockbackAngle;
 	public float knockbackAnimationDuration;
+
+	public bool canShoot = true;
 
 	// Use this for initialization
 	void Start () {
@@ -36,7 +39,7 @@ public class fps_gun_shot_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(this.shotKeycode)) {
+		if (Input.GetKeyDown(this.shotKeycode) && this.canShoot && this.fpsResourceScript.getEstimatedFPS() > 0.0f) {
 			this.onShotTrigger();
 		}
 		if (this.isKnockbackAnimationActive) {
