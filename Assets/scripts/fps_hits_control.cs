@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class fps_hits_control : MonoBehaviour {
 
+	public fps_resource_script fpsResourceScript;
+
+	public int fGainOnHit;
 	public Text hitsText;
 	public Text missesText;
 	private int numHits;
@@ -29,6 +32,7 @@ public class fps_hits_control : MonoBehaviour {
 
 	public void registerHit() {
 		this.numHits += 1;
+		this.fpsResourceScript.addToCurrentF(this.fGainOnHit);
 		this.updateHitsAndMissesText();
 	}
 
