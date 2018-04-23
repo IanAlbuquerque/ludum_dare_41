@@ -71,7 +71,7 @@ public class fps_clickers_script : MonoBehaviour {
 	}
 
 	void updateTexts(int clickerIndex) {
-		this.costTexts[clickerIndex].text = "Costs " + this.clickersCost[clickerIndex] + " Froots";
+		this.costTexts[clickerIndex].text = "Costs " + this.clickersCost[clickerIndex] + " Frootz";
 		this.fpsTexts[clickerIndex].text = "+" + this.clickersFPS[clickerIndex] + " FPS";
 		this.amountTexts[clickerIndex].text = "x" + this.clickerCount[clickerIndex] + " Adopted";
 	}

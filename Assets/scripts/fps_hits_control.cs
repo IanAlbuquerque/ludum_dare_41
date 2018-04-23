@@ -54,7 +54,7 @@ public class fps_hits_control : MonoBehaviour {
 		float newFrootsValue = Mathf.Floor(this.fpsResourceScript.getCurrentF() * this.fGainPercentageOnHit);
 		this.fpsResourceScript.addToCurrentF(newFrootsValue);
 		this.updateHitsAndMissesText();
-		this.hitPopupText.text = "+ " + newFrootsValue + " FROOTS!"; 
+		this.hitPopupText.text = "+ " + newFrootsValue + " FROOTZ!"; 
 		this.isHitPopupRunning = true;
 		this.hitPopupText.enabled = true;
 		this.currentPopupDuration = 0.0f;

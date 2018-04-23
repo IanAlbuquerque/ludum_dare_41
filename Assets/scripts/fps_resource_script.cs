@@ -87,8 +87,8 @@ public class fps_resource_script : MonoBehaviour {
 	}
 
 	void updateFText() {
-		this.fDisplayText.text = Mathf.Floor(this.currentF).ToString() + " FROOTS";
-		this.shopfDisplayText.text = Mathf.Floor(this.currentF).ToString() + " FROOTS";
+		this.fDisplayText.text = Mathf.Floor(this.currentF).ToString() + " FROOTZ";
+		this.shopfDisplayText.text = Mathf.Floor(this.currentF).ToString() + " FROOTZ";
 	}
 
 	void updateFPSText() {
